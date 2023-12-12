@@ -1,0 +1,20 @@
+<h2>Details Team</h2>
+<h3>{{ dataTeamId.name }}</h3>
+
+<section>
+    <div>
+        <img src="{{ dataTeamId.image }}" alt="team-logo">
+    </div>
+    <div>
+        <p>Country: {{ dataTeamId.country }}</p>
+        <p>Adress: {{ dataTeamId.adress }}</p>
+        <p> <a href="{{ dataTeamId.website }}">Website Official</a> </p>
+        <p>Founded: {{ dataTeamId.founded }}</p>
+        <p>Club colors: {{ dataTeamId.clubColors }}</p>
+        <p>Venue: {{ dataTeamId.venue }}</p>
+        <p>Last update: {{ dataTeamId.lastUpdated }}</p>
+    </div>
+
+    <button>Edit</button>
+    <button>Delete</button>
+</section>

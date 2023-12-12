@@ -1,18 +1,15 @@
 const { Router } = require("express");
 const router = Router();
-const { getTeams, getTeam, createTeam, updateTeam, deleteTeam } = require("../controllers/index");
+const { getTeams, getTeam, createTeam, updateTeam, deleteTeam } = require("../controllers/crud-controller");
 
 router.get("/", getTeams);
 
-router.get("/team", getTeam);
+router.get("/details-team/:id", getTeam);
 
-// post
 router.post("/create-team", createTeam);
 
-// put
-router.put("/update-team", updateTeam);
+router.put("/update-team/:id", updateTeam);
 
-// delete
-router.delete("/delete-team", deleteTeam);
+router.delete("/delete-team/:id", deleteTeam);
 
 module.exports = router;

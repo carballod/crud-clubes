@@ -1,1 +1,19 @@
-<h2>Equipos</h2>
+<h2>Teams</h2>
+<section>
+
+  <ul>
+    {{#each dataTeams}}
+      <li>
+        Name: <strong>{{ name }}</strong> 
+        - Country: {{ country }} 
+        - <a href="/details-team/{{ id }}">Details</a>
+      </li>
+    {{/each}}
+  </ul>
+
+  
+  <a href="/update-team">Edit</a>
+  <a href="/delete-team">Delete</a>
+  <a href="/create-team">Create</a>
+
+</section>
