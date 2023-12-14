@@ -41,12 +41,7 @@ crudController.createTeam = (req, res) => {
   ); 
   dataTeams.push( newTeam );
 
-  // console.log( dataTeams )
-  // console.log( req.file )
-
   const filePath = path.resolve(__dirname, '../../data/equipos.json');
-  // console.log( filePath )
-  // console.log( __dirname )
   fs.writeFileSync( filePath, JSON.stringify(dataTeams) );
 
   res.render("teams", { dataTeams });
