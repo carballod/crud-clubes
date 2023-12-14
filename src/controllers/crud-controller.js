@@ -1,5 +1,8 @@
 const mapearTeam = require("../models/mapearTeam");
 const jsonDataTeams = require("../../data/equipos.json");
+const Team = require("../models/team");
+const fs = require("fs");
+const path = require('path');
 
 const crudController = {};
 const dataTeams = mapearTeam(jsonDataTeams);
@@ -8,21 +11,47 @@ crudController.getTeams = (req, res) => {
   res.render("teams", { dataTeams });
 };
 
+
 crudController.getTeam = (req, res) => {
   const { id } = req.params;
   const dataTeamId = dataTeams.find( (team) => team.id == parseInt(id) );
   
   if ( !dataTeamId ) {
-    res.status(404).send("Equipo no encontrado");
+    res.status(404).send("Team not found");
     return;
   }
 
   res.render("details-team", { dataTeamId });
 };
 
-crudController.createTeam = (req, res) => {
+
+crudController.getFormCreateTeam = (req, res) => {
   res.render("create");
 };
+
+
+crudController.createTeam = (req, res) => {
+  const { name, country, shortName, tla, address, phone, website, email, founded, clubColors, venue } = req.body;
+  const id = dataTeams.length + 1;
+  const lastUpdated = new Date().toISOString();
+  const crestUrl = `${req.file.filename}`;
+
+  const newTeam = new Team( 
+    id, { id: 2072, name: country }, name, shortName, tla, crestUrl, address, phone, website, email, founded, clubColors, venue, lastUpdated 
+  ); 
+  dataTeams.push( newTeam );
+
+  // console.log( dataTeams )
+  // console.log( req.file )
+
+  const filePath = path.resolve(__dirname, '../../data/equipos.json');
+  // console.log( filePath )
+  // console.log( __dirname )
+  fs.writeFileSync( filePath, JSON.stringify(dataTeams) );
+
+  res.render("teams", { dataTeams });
+};
+
 
 crudController.updateTeam = (req, res) => {
   res.render("update");

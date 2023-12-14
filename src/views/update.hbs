@@ -1,29 +1,29 @@
 <h2>Edit {{ dataTeam.name }}</h2>
 
-<form action="/update-team/{{ dataTeam.id }}">
+<form action="/update-team/{{ dataTeams.id }}" method="post">
     <label for="name">Name</label>
     <input type="text" name="name" value="{{ dataTeam.name }}">
 
     <label for="country">Country</label>
-    <input type="text" name="country" value="{{ dataTeam.country }}">
+    <input type="text" name="country" value="{{ dataTeams.country }}">
 
     <label for="adress">Adress</label>
-    <input type="text" name="adress" value="{{ dataTeam.adress }}">
+    <input type="text" name="adress" value="{{ dataTeams.adress }}">
 
     <label for="website">Website</label>
-    <input type="text" name="website" value="{{ dataTeam.website }}">
+    <input type="text" name="website" value="{{ dataTeams.website }}">
 
     <label for="founded">Founded</label>
-    <input type="text" name="founded" value="{{ dataTeam.founded }}">
+    <input type="text" name="founded" value="{{ dataTeams.founded }}">
 
     <label for="clubColors">Club colors</label>
-    <input type="text" name="clubColors" value="{{ dataTeam.clubColors }}">
+    <input type="text" name="clubColors" value="{{ dataTeams.clubColors }}">
 
     <label for="venue">Venue</label>
-    <input type="text" name="venue" value="{{ dataTeam.venue }}">
+    <input type="text" name="venue" value="{{ dataTeams.venue }}">
 
     <label for="lastUpdated">Last update</label>
-    <input type="text" name="lastUpdated" value="{{ dataTeam.lastUpdated }}">
+    <input type="text" name="lastUpdated" value="{{ dataTeams.lastUpdated }}">
 
     <button type="submit">Save</button>
 </form>

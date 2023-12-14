@@ -1,11 +1,14 @@
 const { Router } = require("express");
 const router = Router();
-const { getTeams, getTeam, createTeam, updateTeam, deleteTeam } = require("../controllers/crud-controller");
+const multer = require("multer"); 
+const { getTeams, getTeam, getFormCreateTeam, createTeam, updateTeam, deleteTeam } = require("../controllers/crud-controller");
+
 
 router.get("/", getTeams);
 
 router.get("/details-team/:id", getTeam);
 
+router.get("/create-team", getFormCreateTeam);
 router.post("/create-team", createTeam);
 
 router.put("/update-team/:id", updateTeam);

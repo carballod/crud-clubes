@@ -3,11 +3,11 @@
 
 <section>
     <div>
-        <img src="{{ dataTeamId.image }}" alt="team-logo">
+        <img src="{{ dataTeamId.crestUrl }}" alt="team-logo">
     </div>
     <div>
-        <p>Country: {{ dataTeamId.country }}</p>
-        <p>Adress: {{ dataTeamId.adress }}</p>
+        <p>Country: {{ dataTeamId.area.name }}</p>
+        <p>Address: {{ dataTeamId.address }}</p>
         <p> <a href="{{ dataTeamId.website }}">Website Official</a> </p>
         <p>Founded: {{ dataTeamId.founded }}</p>
         <p>Club colors: {{ dataTeamId.clubColors }}</p>

@@ -7,11 +7,15 @@ function mapearTeam(teamDataJson) {
   const teamsMapeados = teamDataJson.map( (team) => {
     return new Team(
       team.id,
+      team.area,
       team.name,
-      team.area.name,
+      team.shortName,
+      team.tla,
       team.crestUrl,
       team.address,
+      team.phone,
       team.website,
+      team.email,
       team.founded,
       team.clubColors,
       team.venue,
