@@ -1,1 +1,6 @@
-<h2>Delete {{ dataTeam.name }}</h2>
+<h2>Delete {{ dataTeamId.name }}</h2>
+
+<p>Do you want to delete <b>{{ dataTeamId.name }}</b>?</p>
+<form action="/delete-team/{{ dataTeamId.id }}" method="post">
+  <button type="submit">Confirm</button>
+</form>

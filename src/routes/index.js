@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { getTeams, getTeam, getFormCreateTeam, createTeam, getFormUpdateTeam, updateTeam, deleteTeam } = require("../controllers/crud-controller");
+const { getTeams, getTeam, getFormCreateTeam, createTeam, getFormUpdateTeam, updateTeam, getDeleteTeam, deleteTeam } = require("../controllers/crud-controller");
 
 
 router.get("/", getTeams);
@@ -14,6 +14,8 @@ router.get("/update-team/:id", getFormUpdateTeam);
 // metodo put (middleware method-override) ?
 router.post("/update-team/:id", updateTeam);
 
-router.delete("/delete-team/:id", deleteTeam);
+router.get("/delete-team/:id", getDeleteTeam);
+// metodo delete (middleware method-override) ?
+router.post("/delete-team/:id", deleteTeam);
 
 module.exports = router;

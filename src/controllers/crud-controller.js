@@ -91,8 +91,28 @@ crudController.updateTeam = (req, res) => {
   res.render("teams", { dataTeams });
 };
 
+crudController.getDeleteTeam = (req, res) => {
+  const { id } = req.params;
+  const dataTeamId = dataTeams.find( (team) => team.id == parseInt(id) );
+  
+  if ( !dataTeamId ) {
+    res.status(404).send("Team not found");
+    return;
+  }
+
+  res.render("delete", { dataTeamId });
+};
+
+
 crudController.deleteTeam = (req, res) => {
-  res.render("delete");
+  const { id } = req.params;
+  const indexTeam = dataTeams.findIndex( (team) => team.id == parseInt(id) );
+  if (indexTeam !== -1) dataTeams.splice(indexTeam, 1);
+
+  const filePath = path.resolve(__dirname, '../../data/equipos.json');
+  fs.writeFileSync( filePath, JSON.stringify(dataTeams) );
+
+  res.render("teams", { dataTeams });
 };
 
 
