@@ -15,6 +15,6 @@
         <p>Last update: {{ dataTeamId.lastUpdated }}</p>
     </div>
 
-    <button>Edit</button>
-    <button>Delete</button>
+    <button onclick="window.location.href='/update-team/{{ dataTeamId.id }}'">Edit</button>
+    <button onclick="window.location.href='/delete-team/{{ dataTeamId.id }}'">Delete</button>
 </section>
