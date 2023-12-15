@@ -3,18 +3,138 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
-h2 {
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+// form 
+
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
     color: #333;
 }
 
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #46a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+button:focus {
+    outline: none;
+}
+
+// principal teams
+
+.teams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.create-button {
     padding: 8px;
     background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 10px;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 6px; 
+}
+
+// details buttons
+
+.button-container {
+    display: flex;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.edit-button, .edit-button:hover, .edit-button:active {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.delete-button, .delete-button:hover, .delete-button:active {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.edit-button:focus {
+    outline: none;
+}
+
+.delete-button:focus {
+    outline: none;
 }

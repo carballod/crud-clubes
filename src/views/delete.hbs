@@ -1,6 +1,6 @@
-<h2>Delete {{ dataTeamId.name }}</h2>
+<h1>Delete {{ dataTeamId.name }}</h1>
 
 <p>Do you want to delete <b>{{ dataTeamId.name }}</b>?</p>
 <form action="/delete-team/{{ dataTeamId.id }}" method="post">
-  <button type="submit">Confirm</button>
+  <button class="delete-button" type="submit">Confirm</button>
 </form>

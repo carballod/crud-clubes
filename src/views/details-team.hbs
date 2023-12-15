@@ -1,5 +1,5 @@
-<h2>Details Team</h2>
-<h3>{{ dataTeamId.name }}</h3>
+<h1>Details Team</h1>
+<h2>{{ dataTeamId.name }}</h2>
 
 <section>
     <div>
@@ -15,6 +15,9 @@
         <p>Last update: {{ dataTeamId.lastUpdated }}</p>
     </div>
 
-    <button onclick="window.location.href='/update-team/{{ dataTeamId.id }}'">Edit</button>
-    <button onclick="window.location.href='/delete-team/{{ dataTeamId.id }}'">Delete</button>
+    <div class="button-container">
+        <button class="edit-button" onclick="window.location.href='/update-team/{{ dataTeamId.id }}'">Edit</button>
+        <button class="delete-button" onclick="window.location.href='/delete-team/{{ dataTeamId.id }}'">Delete</button>
+    </div>
+    
 </section>

@@ -31,6 +31,7 @@ app.set("view engine", ".hbs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/images", express.static("public/uploads/images"));
+app.use(express.static("public"));
 
 app.use(require("./src/routes/index"));
 

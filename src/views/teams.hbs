@@ -1,18 +1,23 @@
-<h2>Teams</h2>
-<section>
 
-  <ul>
-    {{#each dataTeams}}
-      <li>
-        Name: <strong>{{ name }}</strong> 
-        - Country: {{ area.name }} 
-        - <a href="/details-team/{{ id }}">Details</a>
-        - <a href="/update-team/{{ id }}">Edit</a>
-        - <a href="/delete-team/{{ id }}">Delete</a>
-      </li>
-    {{/each}}
-  </ul>
+<div class="teams-container">
+  <header>
+    <h1>Teams</h1>
+    <button onclick="window.location.href='/create-team'" class="create-button">Create</button>
+  </header>
+  
+  <section>
 
-  <button onclick="window.location.href='/create-team'">Create</button>
+    <ul>
+      {{#each dataTeams}}
+        <li>
+          Name: <strong>{{ name }}</strong> 
+          - Country: {{ area.name }} 
+          - <a href="/details-team/{{ id }}">Details</a>
+          - <a href="/update-team/{{ id }}">Edit</a>
+          - <a href="/delete-team/{{ id }}">Delete</a>
+        </li>
+      {{/each}}
+    </ul>
 
-</section>
+  </section>
+</div>
