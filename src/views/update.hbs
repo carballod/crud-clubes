@@ -1,29 +1,44 @@
-<h2>Edit {{ dataTeam.name }}</h2>
+<h2>Edit Team</h2>
+<h3>{{ dataTeamId.name }}</h3>
 
-<form action="/update-team/{{ dataTeams.id }}" method="post">
+<form action="/update-team/{{ dataTeamId.id }}" enctype="multipart/form-data" method="post">
+
     <label for="name">Name</label>
-    <input type="text" name="name" value="{{ dataTeam.name }}">
+    <input type="text" name="name" value="{{ dataTeamId.name }}">
 
     <label for="country">Country</label>
-    <input type="text" name="country" value="{{ dataTeams.country }}">
+    <input type="text" name="country" value="{{ dataTeamId.area.name }}">
 
-    <label for="adress">Adress</label>
-    <input type="text" name="adress" value="{{ dataTeams.adress }}">
+    <label for="shortName">Short name</label>
+    <input type="text" name="shortName" value="{{ dataTeamId.shortName }}">
+
+    <label for="tla">TLA</label>
+    <input type="text" name="tla" value="{{ dataTeamId.tla }}">
+
+    <label for="image">Image</label>
+    <img src="{{ dataTeamId.crestUrl }}" alt="{{ dataTeamId.crestUrl }}">
+    <input type="file" name="image">
+
+    <label for="address">Address</label>
+    <input type="text" name="address" value="{{ dataTeamId.address }}">
+
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" value="{{ dataTeamId.phone }}">
 
     <label for="website">Website</label>
-    <input type="text" name="website" value="{{ dataTeams.website }}">
+    <input type="text" name="website" value="{{ dataTeamId.website }}">
+
+    <label for="email">Email</label>
+    <input type="text" name="email" value="{{ dataTeamId.email }}">
 
     <label for="founded">Founded</label>
-    <input type="text" name="founded" value="{{ dataTeams.founded }}">
+    <input type="number" name="founded" value="{{ dataTeamId.founded }}">
 
     <label for="clubColors">Club colors</label>
-    <input type="text" name="clubColors" value="{{ dataTeams.clubColors }}">
+    <input type="text" name="clubColors" value="{{ dataTeamId.clubColors }}">
 
     <label for="venue">Venue</label>
-    <input type="text" name="venue" value="{{ dataTeams.venue }}">
-
-    <label for="lastUpdated">Last update</label>
-    <input type="text" name="lastUpdated" value="{{ dataTeams.lastUpdated }}">
+    <input type="text" name="venue" value="{{ dataTeamId.venue }}">
 
     <button type="submit">Save</button>
 </form>

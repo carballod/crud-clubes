@@ -318,5 +318,37 @@
     "clubColors": "Red / Black",
     "venue": "Vitality Stadium",
     "lastUpdated": "2020-05-14T02:43:14Z"
+  },
+  {
+    "id": 21,
+    "area": { "id": 2072, "name": "England" },
+    "name": "Snoopy",
+    "shortName": "SNP",
+    "tla": "SNP",
+    "crestUrl": "F210q6mbYAAGPO3.jpeg",
+    "address": "Address Address 123",
+    "phone": "122313133434",
+    "website": "http://www.snoopy.com",
+    "email": "snoopy@google.com",
+    "founded": "1900",
+    "clubColors": "White / blue",
+    "venue": "Snoopy Stadium",
+    "lastUpdated": "2023-12-15T17:37:18.207Z"
+  },
+  {
+    "id": 22,
+    "area": { "id": 2072, "name": "TEST" },
+    "name": "TEST",
+    "shortName": "TST",
+    "tla": "TST",
+    "crestUrl": "F210q6mbYAAGPO3.jpeg",
+    "address": "Address Address 123",
+    "phone": "12231313",
+    "website": "http://www.tests.com",
+    "email": "snoopy@google.com",
+    "founded": "19",
+    "clubColors": "White, grey",
+    "venue": "Stadium Tests",
+    "lastUpdated": "2023-12-15T17:41:33.902Z"
   }
 ]
