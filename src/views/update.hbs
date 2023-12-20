@@ -1,1 +1,44 @@
-<h2>editar equipos existentes (incluyendo el logo)</h2>
+<h1 class="h1-update">Edit Team</h1>
+<h2 class="h2-update">{{ dataTeamId.name }}</h2>
+
+<form action="/update-team/{{ dataTeamId.id }}" enctype="multipart/form-data" method="post">
+
+    <label for="name">Name</label>
+    <input class="form-input-name" type="text" name="name" value="{{ dataTeamId.name }}">
+
+    <label for="country">Country</label>
+    <input class="form-input-country" type="text" name="country" value="{{ dataTeamId.area.name }}">
+
+    <label for="shortName">Short name</label>
+    <input class="form-input-shortName" type="text" name="shortName" value="{{ dataTeamId.shortName }}">
+
+    <label for="tla">TLA</label>
+    <input class="form-input-tla" type="text" name="tla" value="{{ dataTeamId.tla }}">
+
+    <label for="image">Image</label>
+    <img src="{{ dataTeamId.crestUrl }}" alt="{{ dataTeamId.crestUrl }}">
+    <input class="form-input-image" type="file" name="image">
+
+    <label for="address">Address</label>
+    <input class="form-input-address" type="text" name="address" value="{{ dataTeamId.address }}">
+
+    <label for="phone">Phone</label>
+    <input class="form-input-phone" type="text" name="phone" value="{{ dataTeamId.phone }}">
+
+    <label for="website">Website</label>
+    <input class="form-input-website" type="text" name="website" value="{{ dataTeamId.website }}">
+
+    <label for="email">Email</label>
+    <input class="form-input-email" type="text" name="email" value="{{ dataTeamId.email }}">
+
+    <label for="founded">Founded</label>
+    <input class="form-input-founded" type="number" name="founded" value="{{ dataTeamId.founded }}">
+
+    <label for="clubColors">Club colors</label>
+    <input class="form-input-clubColors" type="text" name="clubColors" value="{{ dataTeamId.clubColors }}">
+
+    <label for="venue">Venue</label>
+    <input class="form-input-venue" type="text" name="venue" value="{{ dataTeamId.venue }}">
+
+    <button class="form-btn-save" type="submit">Save</button>
+</form>
