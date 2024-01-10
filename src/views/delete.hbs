@@ -1,1 +1,6 @@
-<h2>(previa confirmación en el frontend) eliminar equipos</h2>
+<h1>Delete {{ dataTeamId.name }}</h1>
+
+<p>Do you want to delete <b>{{ dataTeamId.name }}</b>?</p>
+<form action="/delete-team/{{ dataTeamId.id }}" method="post">
+  <button class="delete-button" type="submit">Confirm</button>
+</form>

@@ -1,0 +1,23 @@
+<h1>Details Team</h1>
+<h2>{{ dataTeamId.name }}</h2>
+
+<section>
+    <div>
+        <img src="/images/{{ dataTeamId.crestUrl }}" alt="team-logo">
+    </div>
+    <div>
+        <p>Country: {{ dataTeamId.area.name }}</p>
+        <p>Address: {{ dataTeamId.address }}</p>
+        <p> <a href="{{ dataTeamId.website }}">Website Official</a> </p>
+        <p>Founded: {{ dataTeamId.founded }}</p>
+        <p>Club colors: {{ dataTeamId.clubColors }}</p>
+        <p>Venue: {{ dataTeamId.venue }}</p>
+        <p>Last update: {{ dataTeamId.lastUpdated }}</p>
+    </div>
+
+    <div class="button-container">
+        <button class="edit-button" onclick="window.location.href='/update-team/{{ dataTeamId.id }}'">Edit</button>
+        <button class="delete-button" onclick="window.location.href='/delete-team/{{ dataTeamId.id }}'">Delete</button>
+    </div>
+    
+</section>
